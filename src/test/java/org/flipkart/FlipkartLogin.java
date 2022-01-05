@@ -3,6 +3,7 @@ package org.flipkart;
 import java.util.Date;
 
 import org.base.LibGlobal;
+import org.fb.FbLogin;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -11,7 +12,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class FlipkartLogin extends LibGlobal{
+public class FlipkartLogin extends FbLogin{
 	FlipkartPojoClass f;
 	@BeforeClass
 	public static void startDate() {

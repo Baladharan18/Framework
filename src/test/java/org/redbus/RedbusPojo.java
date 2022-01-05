@@ -36,6 +36,9 @@ public class RedbusPojo extends LibGlobal{
 	@FindBy(id="mobileNoInp")
 	private WebElement txtMobile;
 	
+	@FindBy(xpath="/html/body/iframe")
+	private WebElement fFrame;
+	
 	//Getters
 	
 	public WebElement getTxtSearch() {
@@ -62,6 +65,9 @@ public class RedbusPojo extends LibGlobal{
 	}
 	public WebElement getTxtMobile() {
 		return txtMobile;
+	}
+	public WebElement getfFrame() {
+		return fFrame;
 	}
 
 }
