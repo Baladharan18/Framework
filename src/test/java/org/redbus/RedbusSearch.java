@@ -38,15 +38,24 @@ public class RedbusSearch extends LibGlobal{
 //			browserQuit();
 		}
 		@Test
-		public void tc() {
+		public void tc() throws AWTException {
 			r=new RedbusPojo();
-			btnClick(r.getBtnPic());
-			btnClick(r.getBtnSign());
-			toWaitimplicit();
-			frameWebelement(r.getFrame());
-			fillTextBox(r.getTxtMobile(), "9790224523");
-			String mob = enteredText(r.getTxtMobile());
-			Assert.assertEquals("Entered Mobile Number","9790224523",mob);
+			fillTextBox(r.getTxtFrom(), "Chennai");
+			enterButton();
+			fillTextBox(r.getTxtTo(), "Thanjavur");
+			enterButton();
+			btnClick(r.getTxtDate());
+			WebElement date = xpath("//td[text()='17']");
+			btnClick(date);
+//			toWaitExplicit(r.getBtnSearch());
+			btnClick(r.getBtnSearch());
+//			btnClick(r.getBtnPic());
+//			btnClick(r.getBtnSign());
+//			toWaitimplicit();
+//			frameWebelement(r.getFrame());
+//			fillTextBox(r.getTxtMobile(), "9790224523");
+//			String mob = enteredText(r.getTxtMobile());
+//			Assert.assertEquals("Entered Mobile Number","9790224523",mob);
 			
 		}	
 		

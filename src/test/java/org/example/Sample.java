@@ -8,6 +8,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.testng.annotations.DataProvider;
 
 public class Sample extends LibGlobal {
 	Loginpage l;
@@ -59,6 +60,12 @@ public class Sample extends LibGlobal {
 	      fillTextBox(l.getTxtpass(), "9790224522");
 	      btnClick(l.getBtnLogin());
 		}
+	@DataProvider(name="credentials")
+	private Object[][] allDatas() {
+		return new Object[][]{
+				{"balajip","979"},{"parani","224523"},{"dharan","4523"}
+		};
+	}
 	
 }
 //public class Sample {

@@ -11,17 +11,16 @@ public class RedbusPojo extends LibGlobal{
 		PageFactory.initElements(driver, this);
 	}
 	//Private Webelement
-//	@FindBy(xpath="//label[text()='FROM']")
-	@FindBy(xpath="//*[@id=\"search\"]/div/div[1]/div/label")
-	private WebElement txtSearch;
+	@FindBy(id="src")
+	private WebElement txtFrom;
 	
-	@FindBy(xpath="//label[text()='TO']")
+	@FindBy(id="dest")
 	private WebElement txtTo;
 	
-	@FindBy(xpath="//label[text()='Date']")
+	@FindBy(id="onward_cal")
 	private WebElement txtDate;
 	
-	@FindBy(xpath="//button[text()='Search Buses']")
+	@FindBy(xpath="//button[@id='search_btn']")
 	private WebElement btnSearch;
 	
 	@FindBy(id="i-icon-profile")
@@ -41,8 +40,8 @@ public class RedbusPojo extends LibGlobal{
 	
 	//Getters
 	
-	public WebElement getTxtSearch() {
-		return txtSearch;
+	public WebElement getTxtFrom() {
+		return txtFrom;
 	}
 	
 	public WebElement getTxtTo() {

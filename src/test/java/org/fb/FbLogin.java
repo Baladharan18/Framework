@@ -8,6 +8,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.testng.annotations.DataProvider;
 
 import junit.framework.Assert;
 
@@ -33,7 +34,8 @@ public class FbLogin extends LibGlobal{
 	@After
 	public void endBrowser() {
 		browserQuit();
-	}	
+	}
+	
 	@Test
 	public void tc() {
 		f=new FbPojoClass();

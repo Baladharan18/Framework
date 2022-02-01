@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.rerun.FailedTestCases"/>
+  </listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="org.rerun.Testng"/>
+    </classes>
+  </test> <!-- Test -->
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="org.rerun.Testng">
+        <methods>
+          <include name="tc3"/>
+        </methods>
+      </class> <!-- org.rerun.Testng -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
